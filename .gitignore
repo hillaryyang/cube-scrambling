@@ -1,0 +1,9 @@
+# Ignore system files and personal files
+.DS_Store
+.vscode/
+.Trash/
+*.log
+
+# Ignore Python files
+*.pyc
+*.pyo
