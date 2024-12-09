@@ -5,14 +5,15 @@ We implement the simulation of the scrambling and solving of many Rubik's cubes 
 Source code is located in GitHub at the link: [https://github.com/hillaryyang/cube-scrambling](https://github.com/hillaryyang/cube-scrambling)
 
 ## Repository structure
-* `code/`: code that generates 
-* `data/`: 
+* `code/`: code that compiles data 
+* `data/`: sample of intermediary raw data
+* `data_processing`: calculates probability distributions and TVD
 
 ## Installation
 1. Clone the repository:
 ```
-$ git clone https://github.com/hillaryyang/cube-scrambling.git
-$ cd cube-scrambling
+git clone https://github.com/hillaryyang/cube-scrambling.git
+cd cube-scrambling
 ```
 
 2. Create and activate venv:
