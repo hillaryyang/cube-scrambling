@@ -10,7 +10,7 @@ Source code is located in GitHub at the link: [https://github.com/hillaryyang/cu
 * `data_processing/`: calculates probability distributions and TVD
 
 ## Background
-A good description of the problem can be found here: [https://theconversation.com/how-hard-is-it-to-scramble-rubiks-cube-129916](https://theconversation.com/how-hard-is-it-to-scramble-rubiks-cube-129916). We use the [half turn metric](https://www.speedsolving.com/wiki/index.php?title=Metric) in Rubik's cube solving. General notation information can be found [here](https://ruwix.com/the-rubiks-cube/notation/). 
+The problem statement can be found here: [https://theconversation.com/how-hard-is-it-to-scramble-rubiks-cube-129916](https://theconversation.com/how-hard-is-it-to-scramble-rubiks-cube-129916). We use the [half turn metric](https://www.speedsolving.com/wiki/index.php?title=Metric) in Rubik's cube solving. An overview of general Rubik's cube notation can be found [here](https://ruwix.com/the-rubiks-cube/notation/). 
 
 ## Installation
 1. Clone the repository:
@@ -32,8 +32,8 @@ pip install -r requirements.txt
 
 ## Usage
 1. For our scrambles, we use a file of 53 million randomly generated scrambles, named `scrambles.txt`:
-* (1) For each number n between 1 and 52, we have 1 million sequences of moves of length n 
-* (2) The last million cubes are of random length and are used to generate the baseline probability distribution.
+* For each number n between 1 and 52, we have 1 million sequences of moves of length n 
+* The last million cubes are of random length and are used to generate the baseline probability distribution.
 
 2. To solve these cubes optimally, we use Tomas Rokicki's Two-Phase solver, [nxopt](https://github.com/rokicki/cube20src) to generate `solved_len.txt`, a file with 53 million lines, each containing a single integer: the number of moves taken to optimally solve the corresponding scramble in `scrambles.txt`.
 
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 * `length`: the length of the scramble in the half turn metric, an integer between 1 and 52
 * `distance`: the optimal solution length, an integer between 0 and 20
 
-**Important** The last million cubes are scrambles of random length, which are used for generating the "baseline" probability distribution. They -1 in the length field.
+The last million cubes (scrambles of random length) have -1 in the length field.
 
 4. Run `python3 code/gen_distrib.py` which converts `solved_len_data.txt` into probability distributions for each length (-1 for the baseline, and between 1 and 53). These distributions can be found [here](https://github.com/hillaryyang/cube-scrambling/blob/main/data/df_dis.csv).
 
