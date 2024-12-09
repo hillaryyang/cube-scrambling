@@ -7,7 +7,6 @@ Source code is located in GitHub at the link: [https://github.com/hillaryyang/cu
 ## Repository Structure
 * `code/`: code that compiles data 
 * `data/`: sample of intermediary raw data
-    * `data/53m.txt.zip`: zipped file of 53 million scrambles used
 * `data_processing/`: calculates probability distributions and TVD
 
 ## Background
