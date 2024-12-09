@@ -7,6 +7,7 @@ Source code is located in GitHub at the link: [https://github.com/hillaryyang/cu
 ## Repository Structure
 * `code/`: code that compiles data 
 * `data/`: sample of intermediary raw data
+    * `data/53m.txt.zip`: zipped file of 53 million scrambles used
 * `data_processing/`: calculates probability distributions and TVD
 
 ## Background
@@ -47,3 +48,5 @@ The last million cubes (scrambles of random length) have -1 in the length field.
 4. Run `python3 code/gen_distrib.py` which converts `solved_len_data.txt` into probability distributions for each length (-1 for the baseline, and between 1 and 53). These distributions can be found [here](https://github.com/hillaryyang/cube-scrambling/blob/main/data/df_dis.csv).
 
 For each scramble length (1 to 53), calculate the TVD (sum of 0.5 * absolute difference). Optionally, generate a graph that plots scramble length against TVD.
+
+We observe that the scrambling number drops below 0.25 first at n = 26 moves.
