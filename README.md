@@ -4,10 +4,13 @@ We implement the simulation of the scrambling and solving of many Rubik's cubes 
 ## Source Code
 Source code is located in GitHub at the link: [https://github.com/hillaryyang/cube-scrambling](https://github.com/hillaryyang/cube-scrambling)
 
-## Repository structure
+## Repository Structure
 * `code/`: code that compiles data 
 * `data/`: sample of intermediary raw data
-* `data_processing`: calculates probability distributions and TVD
+* `data_processing/`: calculates probability distributions and TVD
+
+## Background
+A good description of the problem can be found here: [https://theconversation.com/how-hard-is-it-to-scramble-rubiks-cube-129916](https://theconversation.com/how-hard-is-it-to-scramble-rubiks-cube-129916). We use the [half turn metric](https://www.speedsolving.com/wiki/index.php?title=Metric) in Rubik's cube solving. General notation information can be found [here](https://ruwix.com/the-rubiks-cube/notation/). 
 
 ## Installation
 1. Clone the repository:
@@ -41,6 +44,6 @@ pip install -r requirements.txt
 
 **Important** The last million cubes are scrambles of random length, which are used for generating the "baseline" probability distribution. They -1 in the length field.
 
-4. Run `python3 code/gen_distrib.py` which converts `solved_len_data.txt` into probability distributions for each length (-1 for the baseline, and between 1 and 53). These distributions can be found HERE.
+4. Run `python3 code/gen_distrib.py` which converts `solved_len_data.txt` into probability distributions for each length (-1 for the baseline, and between 1 and 53). These distributions can be found [here](https://github.com/hillaryyang/cube-scrambling/blob/main/data/df_dis.csv).
 
-Then, for each scramble length (1 to 53), calculate the TVD (sum of 0.5 * absolute difference). Optionally, generate a graph that plots scramble length against TVD.
+For each scramble length (1 to 53), calculate the TVD (sum of 0.5 * absolute difference). Optionally, generate a graph that plots scramble length against TVD.
